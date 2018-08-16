@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Mastering Code</title>
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>Title here</h1>
+  <div class="jumbotron">
+    <h1>iFrame is on this page</h1>
+  <iframe id="iframeID" src="iframeTestSrc.html" onload="iFrameTabsScrollToTop()" marginwidth="0" marginheight="0" hspace="0" vspace="0" scrolling="no" width="100%" height="3200px" frameborder="0"></iframe>
+
+
+  </div>
+</div>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script>
+  function iFrameTabsScrollToTop() {
+    $("#iframeID").contents().find(".blue_btn").on('click', function () {
+        window.parent.scroll(0,0);
+    });
+  }
+  </script>
+
+</body>
+</html>
